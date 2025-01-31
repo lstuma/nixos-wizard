@@ -9,20 +9,23 @@ NIXOS_LOGO = ""
 COLORED_LOGO = f"[{DARK_BLUE}]{NIXOS_LOGO}[/]"
 
 def banner():
-    print(f"[{LIGHT_GREEN}]   nixos-wizard[/] [{LIGHT_PURPLE}]v0.1.0[/]")
+    print(f"[{LIGHT_GREEN}]  nixos-wizard[/] [{LIGHT_PURPLE}]v0.1.0[/]")
 
 def info(msg: str, *args, **kwargs):
-    print(f"[{LIGHT_BLUE}]  [/] {COLORED_LOGO} " + msg, *args, **kwargs)
+    print(f"[{LIGHT_BLUE}] [/]" + msg, *args, **kwargs)
 
 def error(msg: str, *args, **kwargs):
-    print(f"[{LIGHT_RED}]  [/] {COLORED_LOGO} " + msg, *args, **kwargs)
+    print(f"[{LIGHT_RED}] [/]" + msg, *args, **kwargs)
 
 def warning(msg: str, *args, **kwargs):
-    print(f"[{LIGHT_YELLOW}]  [/] {COLORED_LOGO} " + msg, *args, **kwargs)
+    print(f"[{LIGHT_YELLOW}] [/]" + msg, *args, **kwargs)
 
 def success(msg: str, *args, **kwargs):
-    print(f"[{LIGHT_GREEN}] 󰐕 [/] {COLORED_LOGO} " + msg, *args, **kwargs)
+    print(f"[{LIGHT_GREEN}]󰐕 [/] " + msg, *args, **kwargs)
 
 def yesno(msg: str, *args, **kwargs) -> bool:
-    print(f"[{LIGHT_PURPLE}]Yy/Nn[/] {COLORED_LOGO} " + msg, end=" ", *args, **kwargs)
+    print(f"[{LIGHT_PURPLE}]Yy/Nn[/] " + msg, end=" ", *args, **kwargs)
     return input().lower().strip() in ["Y", "y"]
+
+def exception(msg: str, exception: Exception, *args, **kwargs):
+    print(f"[{LIGHT_RED}] [/] {msg}: {exception}", *args, **kwargs)
