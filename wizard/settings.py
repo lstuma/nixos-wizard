@@ -22,6 +22,7 @@ def _load_config(config_path: Path) -> dict:
         for key, value in DEFAULTS.items():
             if key not in data:
                 data[key] = value
+    return data
 
 data = _load_config(CONFIG_PATH)
 def get_option(key: str) -> str:
