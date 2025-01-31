@@ -1,4 +1,4 @@
 build/
 venv/
-nixos-wizard.egg-info/
+nixos_wizard.egg-info/
 build/
