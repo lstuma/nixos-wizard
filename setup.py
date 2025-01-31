@@ -14,6 +14,7 @@ setup(
     description="simple nixos-wizard",
     long_description=long_description,
     install_requires=[
+        "yaml",
         "rich",
     ],
     entry_points={
