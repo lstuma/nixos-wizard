@@ -1,5 +1,6 @@
 import subprocess
 from .settings import get_option
+from .log import exception
 
 def execute(bash_code: str, capture: bool = False, allow_single_quotes: bool = False) -> str | None:
     """
@@ -21,6 +22,7 @@ def execute(bash_code: str, capture: bool = False, allow_single_quotes: bool = F
         stdout, stderr = proc.communicate()
         error_output = stderr.decode()
         if error_output:
+            exception("Error executing command", RuntimeError(error_output))
             raise RuntimeError(f"Error executing command `{command}`: {error_output}")
         return stdout.decode()
 
