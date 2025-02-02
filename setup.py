@@ -3,11 +3,8 @@ from pathlib import Path
 
 REPO_DIR = Path.cwd()
 
-try:
-    with open(REPO_DIR / "README.md", "r") as f:
-        long_description = f.read()
-except FileNotFoundError:
-    long_description = ""
+with open(REPO_DIR / "README.md", "r") as f:
+    long_description = f.read()
 
 setup(
     name="nixos-wizard",
@@ -15,8 +12,6 @@ setup(
     license="MIT",
     packages=find_packages(),
     description="simple nixos-wizard",
-    long_description=long_description,
-    long_description_content_type='text/markdown',
     install_requires=[
         "rich",
         "pyyaml"
