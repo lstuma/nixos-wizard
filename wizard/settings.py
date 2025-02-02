@@ -7,9 +7,6 @@ CONFIG_PATH = CONFIG_DIR / "config.yaml"
 
 # default settings
 DEFAULTS = {
-    "git": "/usr/bin/env git",
-    "bash": "/usr/bin/env bash",
-    "nixos": "/usr/bin/env nixos",
     "dotfiles": HOME_DIR / "dotfiles",
 }
 
