@@ -16,6 +16,7 @@ setup(
     packages=find_packages(),
     description="simple nixos-wizard",
     long_description=long_description,
+    long_description_content_type='text/markdown',
     install_requires=[
         "rich",
         "pyyaml"
