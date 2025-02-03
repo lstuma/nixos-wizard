@@ -24,7 +24,7 @@ def success(msg: str, *args, **kwargs):
     print(f"[{LIGHT_GREEN}]󰗠 [/]{msg}", *args, **kwargs)
 
 def yesno(msg: str, *args, **kwargs) -> bool:
-    print(f"[{LIGHT_PURPLE}]󰜴 [/]{msg} \\[{LIGHT_GREEN}]Yy[/]/[{LIGHT_RED}]Nn[/]]", end=" ", *args, **kwargs)
+    print(f"[{LIGHT_PURPLE}]󰜴 [/]{msg} \\[[{LIGHT_GREEN}]Yy[/]/[{LIGHT_RED}]Nn[/]]", end=" ", *args, **kwargs)
     return input().lower().strip() in ["Y", "y"]
 
 def exception(msg: str, exception: Exception, *args, **kwargs):
