@@ -8,10 +8,11 @@ with open(REPO_DIR / "README.md", "r") as f:
 
 setup(
     name="nixos-wizard",
-    version="0.1.0",
+    version="0.1.1",
     license="MIT",
     packages=find_packages(),
     description="simple nixos-wizard",
+    long_description="Simple nixos wizard interface",
     install_requires=[
         "rich",
         "pyyaml"
